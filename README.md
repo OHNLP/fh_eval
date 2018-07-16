@@ -2,18 +2,26 @@
 
 ## Subtask 1: Entity Identification
 
-For the first level evaluation, we ask the participants to provide a list of
-two types of information:
-1) family members of the patient mentioned in the text
-2) observations (diseases) in the whole family history
+For the first level evaluation, we would like you to provide two types of information:
+1) family members mentioned in the text
+2) observations (diseases) in the family history
 
-As mentioned before, the participants should
- provide side of family for each family member (in case mentioned in text).
+The participants should also
+ provide side of family (i.e. Paternal, Maternal, NA) for each family member.
 
-*Note*: for first degree relatives (e.g. parents, childern, siblings),
+The possible family members in this task are:
+```
+Father, Mother, Parent, Sister, Brother, Daughter, Son, Child,
+Grandmother, Grandfather, Grandparent, Cousin, Sibling, Aunt, Uncle.
+```
+
+Please do not include other relatives in your results (e.g. nephew).
+
+### Note
+* For first degree relatives (e.g. parents, childern, siblings),
 the side of family should be always be `"NA"`.
 
-*Note*: to reduce the ambiguity in  observation extraction,
+* To reduce the ambiguity in  observation extraction,
  we accept partial matching of the observations. For example, an extraction
  of `"diabetes"` in the phrase of `"type 2 diabetes"` will be considered as a
  true positive when calculating F1 score. However, each observation should
@@ -89,10 +97,15 @@ the living status score should be ``2 * 2 = 4``.
 For a relative with `"Alive: No"` and `"Healthy: NA"`,
 the living status score should be `0 * 1 = 0`.
 
-*Note*: if multiple relatives are under the family member category,
+### Note
+* If multiple relatives are under the family member category,
 (e.g. multiple maternal aunts)
 with different living status scores, use the minimum of the
 scores as the final score for that category.
+* To be considered as a correct prediction (True Positive) for family members,
+all of the fields  have to be matched, including living status.
+* The observation matching criterion is the same as subtask 1, where
+partial matching is allowed.
 
 # Evaluation
 
@@ -137,12 +150,22 @@ Each team may submit *up to 3 runs* for each subtask (i.e. subtask 1 and 2).
  We will use the highest F1 score for each subtask as your final
  performance for ranking.
 
+You may submit results of either of the subtasks, or both. The two tasks are ranked separately.
+
 Once the official evaluation is done, you may also submit a 4-page, double-column system description
  to be included in the official ranking.
  The template and the instructions can be find here: http://www.biocreative.org/media/store/files/2017/2017_Biocreative_template_format.doc.
 
 Due to the tight timeline, we strongly encourage you to work on your manuscript
  while developing your system.
+
+# Awards
+
+`BioCreative` will provide a total of `$500` for the
+shared task winners ($250 for each subtask). Besides, a limited number
+of `student travel awards` ($500) will also be available to
+support student presenters for their travel expenses.
+
 
 
 # Contact
