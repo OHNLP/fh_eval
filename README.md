@@ -94,7 +94,7 @@ the living status score should be `0 * 1 = 0`.
 with different living status scores, use the minimum of the
 scores as the final score for that category.
 
-# Evalution
+# Evaluation
 
 Please run the evaluation script between your output file and the
 gold standard file to check your system performance. Required Python 2.7
