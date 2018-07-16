@@ -96,9 +96,18 @@ scores as the final score for that category.
 
 # Evaluation
 
+We use standard F1-score as the evaluation (ranking) metrics.
+
+Specifically,
+
+```
+Precision = TP / (TP + FP)
+Recall = TP / (TP + FN)
+F1 = 2 * Precision * Recall / (Precision + Recall)
+```
+
 Please run the evaluation script between your output file and the
-gold standard file to check your system performance. Required Python 2.7
- or Python 3.5 above.
+gold standard TSV file (sent separtately) to check your system performance.
 
 ```
 python eval.py subtask path/to/gold_standard path/to/your/prediction
@@ -108,7 +117,7 @@ python eval.py subtask path/to/gold_standard path/to/your/prediction
 The `subtask` field is either `1` or `2`. For instance, for subtask 1:
 
 ```
-python eval.py 1 gs_subtask1.tsv path/to/your/prediction
+python eval.py 1 gs_subtask1.tsv path/to/your/subtask1/prediction
 ```
 
 You will find your system performance in your command line console.
@@ -121,3 +130,26 @@ Precision: 0.9696969696969697
 Recall: 0.9142857142857143
 F1: 0.9411764705882354
 ```
+
+# Submission
+
+Each team may submit *up to 3 runs* for each subtask (i.e. subtask 1 and 2).
+ We will use the highest F1 score for each subtask as your final
+ performance for ranking.
+
+Once the official evaluation is done, you may also submit a 4-page, double-column system description
+ to be included in the official ranking.
+ The template and the instructions can be find here: http://www.biocreative.org/media/store/files/2017/2017_Biocreative_template_format.doc.
+
+Due to the tight timeline, we strongly encourage you to work on your manuscript
+ while developing your system.
+
+
+# Contact
+Sijia Liu (liu dot sijia at mayo dot edu)
+
+Majid Rastegar-Mojarad (mojarad dot majid at mayo dot edu)
+
+Yanshan Wang (wang dot yanshan at mayo dot edu)
+
+Please join our [google group](https://groups.google.com/forum/#!forum/ohnlp2018) for updates.
