@@ -19,7 +19,7 @@ Please do not include other relatives in your results (e.g. nephew).
 
 ### Note
 * For first degree relatives (e.g. parents, childern, siblings),
-the side of family should be always be `"NA"`.
+the side of family should always be `"NA"`.
 
 * To reduce the ambiguity in  observation extraction,
  we accept partial matching of the observations. For example, an extraction
