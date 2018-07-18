@@ -184,4 +184,4 @@ Majid Rastegar-Mojarad (mojarad dot majid at mayo dot edu)
 
 Yanshan Wang (wang dot yanshan at mayo dot edu)
 
-Please join our [google group](https://groups.google.com/forum/#!forum/ohnlp2018) for updates.
+Please join our [google group](https://groups.google.com/forum/#!forum/ohnlp2018) for further updates.
