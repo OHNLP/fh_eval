@@ -27,6 +27,9 @@ the side of family should always be `"NA"`.
  true positive when calculating F1 score. However, each observation should
  contain no more than 4 tokens.
 
+* To reduce the complexity of the task, the negation information is removed
+from evaluation for both subtasks.
+
 ### Output Format
 
 Within a single file. Fields are deliminated by tabs.
@@ -106,6 +109,11 @@ scores as the final score for that category.
 all of the fields  have to be matched, including living status.
 * The observation matching criterion is the same as subtask 1, where
 partial matching is allowed.
+* For Subtask 2, the condition applied to all relatives should  not be included. For
+example, in the senetnce of "There were no reports of mental retardation. ", 
+the observation of "mental retardation" should not appear in any family memebers. 
+* Negation information is not included in the evaluation.  
+
 
 # Evaluation
 
