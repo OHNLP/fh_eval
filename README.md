@@ -49,7 +49,7 @@ doc_1	Observation	conduction disorders
 
 ## Subtask 2: Family History Extraction
 
-In the second level, the participants need to provide
+In the Subtask 2, the participants need to provide
  summarized information between family members and observations.
 The output file should be in TSV format which the columns are:
 
@@ -66,7 +66,8 @@ In case there are more than one observation for one family member,
 Within a single file. Fields are deliminated by tabs.
 ```
 doc_id  family_member    side_of_family    LivingStatus    living_status_score
-doc_id  family_member    side_of_family    Observation    text_of_observation
+doc_id  family_member    side_of_family    Observation    text_of_observation1
+doc_id  family_member    side_of_family    Observation    text_of_observation2
 ```
 
 Examples:
@@ -158,13 +159,13 @@ Each team may submit *up to 3 runs* for each subtask (i.e. subtask 1 and 2).
  We will use the highest F1 score for each subtask as your final
  performance for ranking.
 
-You may submit results of either of the subtasks, or both. The two tasks are ranked separately.
+You may submit results of either of the subtasks, or both. The two tasks will be ranked separately.
 
 Once the official evaluation is done, you may also submit a 4-page, double-column system description
  to be included in the official ranking.
  The template and the instructions can be find here: http://www.biocreative.org/media/store/files/2017/2017_Biocreative_template_format.doc.
 
-Due to the tight timeline, we strongly encourage you to work on your manuscript
+Due to the tight timeline, we strongly encourage you to work on your system description
  while developing your system.
 
 # Awards
