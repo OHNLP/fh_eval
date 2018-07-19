@@ -32,7 +32,7 @@ from evaluation for both subtasks.
 
 ### Output Format
 
-Within a single file. Fields are deliminated by tabs.
+Within a single file, the fields are deliminated by tabs.
 ```
 doc_id  FamilyMember family_member   SideOfFamily
 doc_id  Observation  text of observation
@@ -58,7 +58,7 @@ The output file should be in TSV format which the columns are:
    * Living status
    * Observation
 
-In case there are more than one observation for one family member,
+In cases where there are more than one observation for one family member category,
  the systems should provide those observations in separate rows.
 
 ### Output Format
@@ -75,7 +75,6 @@ Examples:
 doc_1	Brother	NA	LivingStatus	4
 doc_1	Father	NA	LivingStatus	4
 doc_1	Grandfather	Paternal	LivingStatus	0
-doc_1	Uncle	Maternal	Observation	ovarian failure
 doc_1	Cousin	Paternal	Observation	 phaeochromocytoma
 doc_1	Cousin	Paternal	Observation	choreic dysphonia
 ```
@@ -110,10 +109,10 @@ scores as the final score for that category.
 all of the fields  have to be matched, including living status.
 * The observation matching criterion is the same as subtask 1, where
 partial matching is allowed.
-* For Subtask 2, the condition applied to all relatives should  not be included. For
+* For Subtask 2, conditions applied to all relatives should  not be included. For
 example, in the senetnce of "There were no reports of mental retardation. ", 
 the observation of "mental retardation" should not appear in any family memebers. 
-* Negation information is not included in the evaluation.  
+* Negation information is not included in the evaluation. The participants should output all the observations without removing negated ones.
 
 
 # Evaluation
