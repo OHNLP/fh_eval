@@ -181,10 +181,8 @@ support student presenters for their travel expenses.
 
 If you have any questions, remarks, bug reports, bug fixes or extensions, we are happy to hear from you.
 
-Sijia Liu (liu dot sijia at mayo dot edu)
+* Sijia Liu (liu dot sijia at mayo dot edu)
+* Majid Rastegar-Mojarad (mojarad dot majid at mayo dot edu)
+* Yanshan Wang (wang dot yanshan at mayo dot edu)
 
-Majid Rastegar-Mojarad (mojarad dot majid at mayo dot edu)
-
-Yanshan Wang (wang dot yanshan at mayo dot edu)
-
-Please join our [google group](https://groups.google.com/forum/#!forum/ohnlp2018) for further updates.
+Please also join our [google group](https://groups.google.com/forum/#!forum/ohnlp2018) for further updates.
