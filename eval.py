@@ -70,6 +70,13 @@ def parse_s2_output(output_path):
 
 
 def calculate_s1(gs_tsv, pred_tsv, verbose):
+    """
+    Calculate system performance of subtask 1
+    :param gs_tsv:
+    :param pred_tsv:
+    :param verbose:
+    :return: None. The performance are printed in console output
+    """
     gs_fm, gs_ob = parse_s1_output(gs_tsv)
     pred_fm, pred_ob = parse_s1_output(pred_tsv)
 
@@ -128,6 +135,14 @@ def calculate_s1(gs_tsv, pred_tsv, verbose):
 
 
 def calculate_s2(gs_tsv, pred_tsv, verbose):
+    """
+    Calculate system performance of subtask 2
+    :param gs_tsv:
+    :param pred_tsv:
+    :param verbose:
+    :return: None. The performance are printed in console output
+    """
+
     gs_fm, gs_ob = parse_s2_output(gs_tsv)
     pred_fm, pred_ob = parse_s2_output(pred_tsv)
 
@@ -188,8 +203,10 @@ def calculate_s2(gs_tsv, pred_tsv, verbose):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("subtask", type=int, help="selection of subtasks: \"1\" or \"2\"" )
-    parser.add_argument("-v", "--verbose", help="increase performance of family members and observations",
+    parser.add_argument("subtask", type=int, help="selection of subtasks: \"1\" or \"2\"")
+    parser.add_argument("-v", "--verbose",
+                        help="includes the performance of " +
+                             "family members and observations in the output",
                         action="store_true")
 
     parser.add_argument("gs", help="Gold Standard file of the selected subtask")
