@@ -32,7 +32,7 @@ from evaluation for both subtasks.
 
 ### Output Format
 
-Within a single file, the fields are deliminated by tabs.
+Within a single file, the fields are delimited by tabs.
 ```
 doc_id  FamilyMember family_member   SideOfFamily
 doc_id  Observation  text of observation
