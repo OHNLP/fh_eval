@@ -82,8 +82,6 @@ def get_pr_f1(tp, fp, fn):
     print()
 
 
-
-
 def calculate_s1(gs_tsv, pred_tsv, verbose):
     """
     Calculate system performance of subtask 1
@@ -209,7 +207,6 @@ def calculate_s2(gs_tsv, pred_tsv, verbose):
     get_pr_f1(tp, fp, fn)
 
 
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("subtask", type=int, help="selection of subtasks: \"1\" or \"2\"")
@@ -230,8 +227,3 @@ if __name__ == '__main__':
     else:
         print("Please select the subtask. ")
         parser.print_help()
-
-
-
-
-
