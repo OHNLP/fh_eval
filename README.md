@@ -18,7 +18,7 @@ Grandmother, Grandfather, Grandparent, Cousin, Sibling, Aunt, Uncle.
 Please do not include other relatives in your results (e.g. nephew).
 
 ### Note
-* For first degree relatives (e.g. parents, childern, siblings),
+* For first degree relatives (e.g. parents, children, siblings),
 the side of family should always be `"NA"`.
 
 * To reduce the ambiguity in  observation extraction,
@@ -63,7 +63,7 @@ In cases where there are more than one observation for one family member categor
 
 ### Output Format
 
-Within a single file. Fields are deliminated by tabs.
+Within a single file. Fields are delimited by tabs.
 ```
 doc_id  family_member    side_of_family    LivingStatus    living_status_score
 doc_id  family_member    side_of_family    Observation    text_of_observation1
@@ -110,8 +110,8 @@ all of the fields  have to be matched, including living status.
 * The observation matching criterion is the same as subtask 1, where
 partial matching is allowed.
 * For Subtask 2, conditions applied to all relatives should  not be included. For
-example, in the senetnce of "There were no reports of mental retardation. ", 
-the observation of "mental retardation" should not appear in any family memebers. 
+example, in the sentences of "There were no reports of mental retardation. ", 
+the observation of "mental retardation" should not appear in any family members. 
 * Negation information is not included in the evaluation. The participants should output all the observations without removing negated ones.
 
 
@@ -128,7 +128,7 @@ F1 = 2 * Precision * Recall / (Precision + Recall)
 ```
 
 Please run the evaluation script between your output file and the
-gold standard TSV file (sent separtately) to check your system performance.
+gold standard TSV file (sent separately) to check your system performance.
 
 ```
 python eval.py subtask path/to/gold_standard path/to/your/prediction
@@ -158,20 +158,20 @@ Each team may submit *up to 3 runs* for each subtask (i.e. subtask 1 and 2).
  We will use the highest F1 score for each subtask as your final
  performance for ranking.
 
-You may submit results of either of the subtasks, or both. The two tasks will be ranked separately.
+You may submit results of either of the subtasks, or both. The two tasks will be ranked separately. 
 
 Once the official evaluation is done, you may also submit a 4-page, double-column system description
  to be included in the official ranking.
- The template and the instructions can be find here: http://www.biocreative.org/media/store/files/2017/2017_Biocreative_template_format.doc.
+ The template and the instructions can be find here: http://www.biocreative.org/media/store/files/2017/2017_Biocreative_template_format.doc. 
 
 Due to the tight timeline, we strongly encourage you to work on your system description
  while developing your system.
 
 # Awards
 
-`BioCreative` will provide a total of `$500` for the
+*BioCreative* will provide a total of $500 for the
 shared task winners ($250 for each subtask). Besides, a limited number
-of `student travel awards` ($500) will also be available to
+of *student travel awards* ($500) are also available to
 support student presenters for their travel expenses.
 
 
