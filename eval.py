@@ -2,7 +2,7 @@
 """
     File name: eval.py
     Project: Family History Extraction
-    Desciption: evaluation script of the OHNLP/BioCreative 2018 Task 1: Family history extraction
+    Description: evaluation script of the OHNLP/BioCreative 2018 Task 1: Family history extraction
     Author: Sijia Liu (liu dot sijia at mayo dot edu)
 """
 
@@ -30,7 +30,7 @@ def parse_s1_output(output_path):
                 out_fm |= set([(doc, fm, side)])
             elif len(splits) == 3:
                 doc, _, ob = splits
-                out_ob[doc] |= set([ob])
+                out_ob[doc] |= set([ob.lower()])
             else:
                 print("Number of fields should be 3 or 4. Got {} instead: ".format(len(splits)))
                 print("\"{}\"\t->\t{}".format(l.strip(), splits))
@@ -64,9 +64,24 @@ def parse_s2_output(output_path):
                 out_fm |= set([(doc, fm, side, status)])
             elif splits[3] == 'Observation':
                 doc, fm, side, _ , ob = splits
-                out_ob[(doc, fm, side)] |= set([ob])
+                out_ob[(doc, fm, side)] |= set([ob.lower()])
 
     return out_fm, out_ob
+
+
+def get_pr_f1(tp, fp, fn):
+    print("TP\t\tFP\t\tFN\t\t")
+    print("{}\t{} \t{}".format(tp, fp, fn))
+
+    precision = tp / float(tp + fp)
+    recall = tp / float(tp + fn)
+
+    f1 = 2 * precision * recall / (precision + recall)
+    print("Prevision\tRecall\tF1")
+    print("{:.4f}\t{:.4f} \t{:.4f}".format(precision, recall, f1))
+    print()
+
+
 
 
 def calculate_s1(gs_tsv, pred_tsv, verbose):
@@ -92,7 +107,9 @@ def calculate_s1(gs_tsv, pred_tsv, verbose):
     fn_fm = len(gs_fm) - tp_fm
 
     if verbose:
-        print("FM:\n\tTP: {}\n\tFP: {} \n\tFN: {}".format(tp_fm, fp_fm, fn_fm))
+        print("FM: ")
+        get_pr_f1(tp_fm, fp_fm, fn_fm)
+
 
     tp_ob = 0
     total_pred_ob = 0
@@ -118,20 +135,15 @@ def calculate_s1(gs_tsv, pred_tsv, verbose):
     fn_ob = total_gs_ob - tp_ob
 
     if verbose:
-        print("OB:\n\tTP: {}\n\tFP: {} \n\tFN: {}".format(tp_ob, fp_ob, fn_ob))
+        print("OB: ")
+        get_pr_f1(tp_ob, fp_ob, fn_ob)
 
     tp = tp_ob + tp_fm
     fp = fp_ob + fp_fm
     fn = fn_ob + fn_fm
 
-    print("TP: {}\nFP: {} \nFN: {}".format(tp, fp, fn))
-
-    precision = tp / float(tp + fp)
-    recall = tp / float(tp + fn)
-
-    f1 = 2 * precision * recall / (precision + recall)
-
-    print("Precision: {:.4f}\nRecall: {:.4f} \nF1: {:.4f}".format(precision, recall, f1))
+    print("Overall:")
+    get_pr_f1(tp, fp, fn)
 
 
 def calculate_s2(gs_tsv, pred_tsv, verbose):
@@ -158,7 +170,8 @@ def calculate_s2(gs_tsv, pred_tsv, verbose):
     fn_fm = len(gs_fm) - tp_fm
 
     if verbose:
-        print("FM:\n\tTP: {}\n\tFP: {} \n\tFN: {}".format(tp_fm, fp_fm, fn_fm))
+        print("FM: ")
+        get_pr_f1(tp_fm, fp_fm, fn_fm)
 
     tp_ob = 0
     total_pred_ob = 0
@@ -185,20 +198,16 @@ def calculate_s2(gs_tsv, pred_tsv, verbose):
     fn_ob = total_gs_ob - tp_ob
 
     if verbose:
-        print("OB:\n\tTP: {}\n\tFP: {} \n\tFN: {}".format(tp_ob, fp_ob, fn_ob))
+        print("OB: ")
+        get_pr_f1(tp_ob, fp_ob, fn_ob)
 
     tp = tp_ob + tp_fm
     fp = fp_ob + fp_fm
     fn = fn_ob + fn_fm
 
-    print("TP: {}\nFP: {} \nFN: {}".format(tp, fp, fn))
+    print("Overall:")
+    get_pr_f1(tp, fp, fn)
 
-    precision = tp / float(tp + fp)
-    recall = tp / float(tp + fn)
-
-    f1 = 2 * precision * recall / (precision + recall)
-
-    print("Precision: {:.4f}\nRecall: {:.4f} \nF1: {:.4f}".format(precision, recall, f1))
 
 
 if __name__ == '__main__':
