@@ -175,13 +175,11 @@ of *student travel awards* ($500) are also available to
 support student presenters for their travel expenses.
 
 
-
 # Contact
 
-If you have any questions, remarks, bug reports, bug fixes or extensions, we are happy to hear from you.
+Please find more information on our [workshop site](https://sites.google.com/view/ohnlp2018/home).
 
-* Sijia Liu (liu dot sijia at mayo dot edu)
-* Majid Rastegar-Mojarad (mojarad dot majid at mayo dot edu)
-* Yanshan Wang (wang dot yanshan at mayo dot edu)
+# Acknowledgment
+Please kindly cite our task overview paper as:
 
-Please also join our [google group](https://groups.google.com/forum/#!forum/ohnlp2018) for further updates.
+Sijia Liu, Majid Rastegar-Mojarad, Yanshan Wang, Liwei Wang, Feichen Shen, Sunyang Fu, Hongfang Liu. Overview of the BioCreative/OHNLP 2018 Family History Extraction Task. *BioCreative/OHNLP 2018 Workshop Proceedings*  [[PDF](https://github.com/ohnlp/BioCreativeOHNLPProceedings/raw/master/FHE_overview.pdf)]
