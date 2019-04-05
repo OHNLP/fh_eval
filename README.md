@@ -2,7 +2,7 @@
 
 ## Subtask 1: Entity Identification
 
-For the first level evaluation, we would like you to provide two types of information:
+For the first subtask, we would like you to extract two types of entities:
 1) family members mentioned in the text
 2) observations (diseases) in the family history
 
@@ -49,8 +49,7 @@ doc_1	Observation	conduction disorders
 
 ## Subtask 2: Family History Extraction
 
-In the Subtask 2, the participants need to provide
- summarized information between family members and observations.
+In the Subtask 2, the participants need to extract relations between family members and observations.
 The output file should be in TSV format which the columns are:
 
    * Family member
