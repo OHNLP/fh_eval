@@ -49,7 +49,8 @@ doc_1	Observation	conduction disorders
 
 ## Subtask 2: Family History Extraction
 
-In the Subtask 2, the participants need to extract relations between family members and observations.
+In the Subtask 2, the participants need to extract the relations between family members, observations and living status. The purpose of this subtask is to evaluate participating systems as end-to-end family history summarization systems based on clinical texts.
+
 The output file should be in TSV format which the columns are:
 
    * Family member
