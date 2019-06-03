@@ -1,6 +1,6 @@
 # Output Format and Evaluation for Family History Extraction
 
-## Subtask 1: Entity Identification test
+## Subtask 1: Entity Identification
 
 For the first subtask, we would like you to extract two types of entities:
 1) family members mentioned in the text
